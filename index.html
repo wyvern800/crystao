@@ -32,7 +32,7 @@
         a.setAttribute("defer", "");
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // FAQ accordion functionality
             const faqButtons = document.querySelectorAll('.overflow-hidden.border-b button');
             faqButtons.forEach(button => {
@@ -40,7 +40,7 @@
                     // Find the content div that follows this button
                     const content = button.nextElementSibling;
                     const arrow = button.querySelector('.lucide-chevron-right');
-                    
+
                     // Toggle the content
                     if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
                         content.style.maxHeight = content.scrollHeight + 'px';
@@ -60,18 +60,18 @@
                 const prevBtn = container.querySelector('.lucide-chevron-left').closest('button');
                 const nextBtn = container.querySelector('.lucide-chevron-right').closest('button');
                 let currentIndex = 0;
-                
+
                 function updateSlider() {
                     slider.style.transform = `translateX(-${currentIndex}00%)`;
                 }
-                
+
                 if (prevBtn) {
                     prevBtn.addEventListener('click', () => {
                         currentIndex = Math.max(0, currentIndex - 1);
                         updateSlider();
                     });
                 }
-                
+
                 if (nextBtn) {
                     nextBtn.addEventListener('click', () => {
                         const maxIndex = slider.children.length - 1;
@@ -86,7 +86,7 @@
 
             // Button click handlers
             document.querySelectorAll('button').forEach(button => {
-                button.addEventListener('click', function(e) {
+                button.addEventListener('click', function (e) {
                     if (this.textContent.includes('Quero garantir agora')) {
                         // Handle guarantee button clicks
                         window.location.href = '#offers';
@@ -109,25 +109,19 @@
             <div
                 class="relative z-10 container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-6rem)]">
                 <div class="flex justify-center mb-8">
-                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 flex items-center space-x-2"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-shield w-4 h-4">
-                            <path
-                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
-                            </path>
-                        </svg><span class="text-sm font-medium">🔒 Compra 100% segura e protegida</span></div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 flex items-center space-x-2">
+                        </svg><span class="text-sm font-medium">🔒Compra 100% segura e protegida</span></div>
                 </div>
                 <h1 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight">Você receberá <span
-                        class="block text-[rgba(255,240,0,1)]">+35 Livros Cristãos para Colorir</span></h1>
+                        class="block text-[rgba(255,240,0,1)]">35 Livros Cristãos para Colorir</span></h1>
                 <div class="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 mb-8 max-w-2xl mx-auto">
                     <p class="text-lg text-white/90 leading-relaxed">🖍️ Atividades que tiram seus filhos das telas e
                         aproximam eles de você e de Deus. Mais presença. Mais paz. Mais conexão com a fé.</p>
                 </div>
                 <div class="flex justify-center mb-8 mx-auto">
                     <div class="relative w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-2xl"><iframe
-                            src="https://www.youtube.com/embed/CqW5xIzHxGA" title="Livros de Colorir Cristãos"
-                            class="w-full h-full" frameborder="0"
+                            src="/index_files/chamada.mp4" title="Livros de Colorir Cristãos" class="w-full h-full"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen="" loading="lazy"></iframe></div>
                 </div>
@@ -180,123 +174,37 @@
                 <div class="relative max-w-xs mx-auto">
                     <div class="overflow-hidden rounded-lg">
                         <div class="flex transition-transform duration-500 ease-in-out"
-                            style="transform: translateX(-800%);">
-                            <div class="w-full flex-shrink-0">
+                            style="transform: translateX(0%);">
+                            <div class="w-full flex-shrink-0 h-50">
                                 <div
                                     class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Adão e Eva" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/adao-e-eva-novo.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="A Criação do Mundo" loading="lazy" width="300"
-                                            height="450" decoding="async" data-nimg="1"
+                                    <div class="p-0"><img alt="Adão e Eva" loading="lazy" decoding="async" data-nimg="1"
                                             class="w-full h-auto object-cover rounded-lg" style="color:transparent"
-                                            src="./index_files/a-criacao-do-mundo-novo.png"></div>
+                                            src="./index_files/Mockup1.png"></div>
                                 </div>
                             </div>
-                            <div class="w-full flex-shrink-0">
+                            <div class="w-full flex-shrink-0 h-50">
                                 <div
                                     class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="A Vida de Jesus" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/a-vida-de-jesus-novo.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Páscoa Cristã" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/pascoa-crista.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Onde o Céu Toca o Papel" loading="lazy" width="300"
-                                            height="450" decoding="async" data-nimg="1"
+                                    <div class="p-0"><img alt="Adão e Eva" loading="lazy" decoding="async" data-nimg="1"
                                             class="w-full h-auto object-cover rounded-lg" style="color:transparent"
-                                            src="./index_files/onde-o-ceu-toca-o-papel.png"></div>
+                                            src="./index_files/Mockup2.png"></div>
                                 </div>
                             </div>
-                            <div class="w-full flex-shrink-0">
+                            <div class="w-full flex-shrink-0 h-50">
                                 <div
                                     class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="História de Pedro" loading="lazy" width="300"
-                                            height="450" decoding="async" data-nimg="1"
+                                    <div class="p-0"><img alt="Adão e Eva" loading="lazy" decoding="async" data-nimg="1"
                                             class="w-full h-auto object-cover rounded-lg" style="color:transparent"
-                                            src="./index_files/historia-de-pedro.png"></div>
+                                            src="./index_files/Mockup3.png"></div>
                                 </div>
                             </div>
-                            <div class="w-full flex-shrink-0">
+                            <div class="w-full flex-shrink-0 h-50">
                                 <div
                                     class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Livro de Moisés" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/livro-de-moises.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Heróis da Fé" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/herois-da-fe.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="A Arca de Noé" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/a-arca-de-noe.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="O Natal de Jesus" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/o-natal-de-jesus.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Colorir Versículos" loading="lazy" width="300"
-                                            height="450" decoding="async" data-nimg="1"
+                                    <div class="p-0"><img alt="Adão e Eva" loading="lazy" decoding="async" data-nimg="1"
                                             class="w-full h-auto object-cover rounded-lg" style="color:transparent"
-                                            src="./index_files/colorir-versiculos.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Frutos do Espírito" loading="lazy" width="300"
-                                            height="450" decoding="async" data-nimg="1"
-                                            class="w-full h-auto object-cover rounded-lg" style="color:transparent"
-                                            src="./index_files/frutos-do-espirito.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Davi e Golias" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/davi-e-golias.png"></div>
-                                </div>
-                            </div>
-                            <div class="w-full flex-shrink-0">
-                                <div
-                                    class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                                    <div class="p-0"><img alt="Jonas e a Baleia" loading="lazy" width="300" height="450"
-                                            decoding="async" data-nimg="1" class="w-full h-auto object-cover rounded-lg"
-                                            style="color:transparent" src="./index_files/jonas-e-a-baleia.png"></div>
+                                            src="./index_files/Mockup4.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +228,7 @@
                         Quero garantir agora!</button></div>
             </div>
         </section>
-       
+
         <section class="py-12 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
@@ -523,10 +431,11 @@
                                 <div class="mb-6"><img alt="Área de membros em todos os dispositivos" loading="lazy"
                                         width="500" height="300" decoding="async" data-nimg="1"
                                         class="w-full h-auto rounded-lg shadow-md" style="color:transparent"
-                                        src="./index_files/area-membros-dispositivos.png"></div>
+                                        src="./index_files/trinaecinto.png"></div>
                                 <ul class="space-y-4 mb-8 px-6 py-4">
                                     <li class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div
+                                            class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -534,10 +443,12 @@
                                                 <path d="M20 6 9 17l-5-5"></path>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-800 text-base leading-relaxed"><b>32 livros para colorir</b> exclusivos</span>
+                                        <span class="text-gray-800 text-base leading-relaxed"><b>32 livros para
+                                                colorir</b> exclusivos</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div
+                                            class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -545,10 +456,12 @@
                                                 <path d="M20 6 9 17l-5-5"></path>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-800 text-base leading-relaxed"><b>Arquivos em PDF</b> para imprimir à vontade</span>
+                                        <span class="text-gray-800 text-base leading-relaxed"><b>Arquivos em PDF</b>
+                                            para imprimir à vontade</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div
+                                            class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -556,10 +469,12 @@
                                                 <path d="M20 6 9 17l-5-5"></path>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-800 text-base leading-relaxed"><b>Link direto</b> para download no Google Drive</span>
+                                        <span class="text-gray-800 text-base leading-relaxed"><b>Link direto</b> para
+                                            download no Google Drive</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div
+                                            class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -567,10 +482,12 @@
                                                 <path d="M20 6 9 17l-5-5"></path>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-800 text-base leading-relaxed"><b>Acesso vitalício</b> aos desenhos</span>
+                                        <span class="text-gray-800 text-base leading-relaxed"><b>Acesso vitalício</b>
+                                            aos desenhos</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <div
+                                            class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -578,7 +495,8 @@
                                                 <path d="M20 6 9 17l-5-5"></path>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-800 text-base leading-relaxed"><b>Mais de 120 stickers</b> para seu filho se divertir</span>
+                                        <span class="text-gray-800 text-base leading-relaxed"><b>Mais de 120
+                                                stickers</b> para seu filho se divertir</span>
                                     </li>
                                 </ul><a
                                     href="https://pay.cakto.com.br/tvztb5g_498177?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term="
@@ -604,7 +522,7 @@
                                 <div class="mb-6"><img alt="Acesso via Google Drive" loading="lazy" width="400"
                                         height="300" decoding="async" data-nimg="1"
                                         class="w-full h-auto rounded-lg shadow-md" style="color:transparent"
-                                        src="./index_files/google-drive-basico.png"></div>
+                                        src="./index_files/quinze.png"></div>
                                 <ul class="space-y-4 mb-8">
                                     <li class="flex items-start space-x-3">
                                         <div
@@ -614,7 +532,9 @@
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="lucide lucide-check w-4 h-4 text-white">
                                                 <path d="M20 6 9 17l-5-5"></path>
-                                            </svg></div><span class="text-sm lg:text-base text-gray-700"><strong>15 livros para colorir</strong> exclusivos</span>
+                                            </svg>
+                                        </div><span class="text-sm lg:text-base text-gray-700"><strong>15 livros para
+                                                colorir</strong> exclusivos</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
                                         <div
@@ -624,7 +544,9 @@
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="lucide lucide-check w-4 h-4 text-white">
                                                 <path d="M20 6 9 17l-5-5"></path>
-                                            </svg></div><span class="text-sm lg:text-base text-gray-700"><strong>Arquivos em PDF</strong> para imprimir à vontade</span>
+                                            </svg>
+                                        </div><span class="text-sm lg:text-base text-gray-700"><strong>Arquivos em
+                                                PDF</strong> para imprimir à vontade</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
                                         <div
@@ -634,7 +556,9 @@
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="lucide lucide-check w-4 h-4 text-white">
                                                 <path d="M20 6 9 17l-5-5"></path>
-                                            </svg></div><span class="text-sm lg:text-base text-gray-700"><strong>Link direto</strong> para download no Google Drive</span>
+                                            </svg>
+                                        </div><span class="text-sm lg:text-base text-gray-700"><strong>Link
+                                                direto</strong> para download no Google Drive</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
                                         <div
@@ -644,7 +568,9 @@
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="lucide lucide-check w-4 h-4 text-white">
                                                 <path d="M20 6 9 17l-5-5"></path>
-                                            </svg></div><span class="text-sm lg:text-base text-gray-700"><strong>Acesso vitalício</strong> aos desenhos</span>
+                                            </svg>
+                                        </div><span class="text-sm lg:text-base text-gray-700"><strong>Acesso
+                                                vitalício</strong> aos desenhos</span>
                                     </li>
                                 </ul><a
                                     href="https://pay.cakto.com.br/f498f9e_498180?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term="
@@ -652,7 +578,8 @@
                                     class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 px-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-4 text-base lg:text-lg font-semibold rounded-full shadow-lg transition-all duration-200">👉
                                     Quero o pacote básico por R$10</a>
                                 <div class="text-center mt-4">
-                                    <p class="text-sm text-gray-600">✅ Acesso imediato • 🔒 Compra 100% segura • 💰 Garantia de 7 dias</p>
+                                    <p class="text-sm text-gray-600">✅ Acesso imediato • 🔒 Compra 100% segura • 💰
+                                        Garantia de 7 dias</p>
                                 </div>
                             </div>
                         </div>
@@ -660,29 +587,30 @@
                 </div>
                 <div class="mt-16 text-center">
                     <div
-                    class="text-card-foreground mx-auto max-w-xl bg-green-50 border border-green-300 rounded-lg shadow-md">
-                    <div class="p-6 text-center">
-                        <div class="flex items-center justify-center space-x-3 mb-2"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="lucide lucide-check w-6 h-6 text-green-600 flex-shrink-0">
-                                <path d="M20 6 9 17l-5-5"></path>
-                            </svg>
-                            <h3 class="text-xl font-bold text-gray-800">Garantia total de 7 dias:</h3>
+                        class="text-card-foreground mx-auto max-w-xl bg-green-50 border border-green-300 rounded-lg shadow-md">
+                        <div class="p-6 text-center">
+                            <div class="flex items-center justify-center space-x-3 mb-2"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-check w-6 h-6 text-green-600 flex-shrink-0">
+                                    <path d="M20 6 9 17l-5-5"></path>
+                                </svg>
+                                <h3 class="text-xl font-bold text-gray-800">Garantia total de 7 dias:</h3>
+                            </div>
+                            <p class="text-gray-700 text-lg">Não gostou? Devolvemos seu dinheiro.</p>
                         </div>
-                        <p class="text-gray-700 text-lg">Não gostou? Devolvemos seu dinheiro.</p>
                     </div>
                 </div>
-                </div>
             </div>
-            
+
             <div class="text-center mt-12">
                 <button
                     class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-11 bg-green-500 hover:bg-green-600 text-white py-[14px] px-6 text-lg font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200 btn-pulse mx-auto">👉
-                    Quero garantir agora!</button></div>
+                    Quero garantir agora!</button>
+            </div>
         </section>
-        
+
         <section class="py-20 bg-light-lilac">
             <div class="container mx-auto px-4 text-center">
                 <div class="text-center mb-16">
@@ -753,7 +681,8 @@
                         </button>
                         <div class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
                             <div class="p-4 bg-light-beige text-gray-700 text-left">
-                                <p>Os livros são adequados para crianças de 3 a 12 anos, com diferentes níveis de complexidade.</p>
+                                <p>Os livros são adequados para crianças de 3 a 12 anos, com diferentes níveis de
+                                    complexidade.</p>
                             </div>
                         </div>
                     </div>
@@ -781,13 +710,18 @@
                 <h2 class="text-4xl font-bold mb-6">Não Perca Esta Oportunidade Única!</h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto">Transforme os momentos em família com atividades que
                     fortalecem a fé e criam memórias eternas.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12"><button
-                        class="inline-flex items-center justify-center gap-2 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-11 bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold rounded-full whitespace-nowrap">QUERO
-                        O PACOTE BÁSICO - R$ 10,00</button><button
-                        class="inline-flex items-center justify-center gap-2 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-11 bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 text-lg font-bold rounded-full whitespace-nowrap">QUERO
-                        O PACOTE PREMIUM - R$ 19,90</button></div>
-                <p class="text-base opacity-90 mt-8 text-center py-4 text-white">💝 Pequenos Discípulos - Formando
-                    corações para Jesus© 2024 Pequenos Discípulos. Todos os direitos reservados. 🙏</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#offers"
+                        class="inline-flex items-center justify-center gap-2 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold rounded-full whitespace-nowrap">
+                        QUERO O PACOTE BÁSICO - R$ 10,00
+                    </a>
+                    <a href="#offers"
+                        class="inline-flex items-center justify-center gap-2 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 text-lg font-bold rounded-full whitespace-nowrap">
+                        QUERO O PACOTE PREMIUM - R$ 19,90
+                    </a>
+                </div>
+                <p class="text-base opacity-90 mt-8 text-center py-4 text-white">Luz e Cor Cristã © 2025. Todos os
+                    direitos reservados.</p>
             </div>
         </section>
     </div>
@@ -1194,7 +1128,8 @@
                 <div class="autotdk_ext_main"><!--v-if--><!----></div>
             </div>
             <div class="flex flex-col z-1" style="position: fixed; right: 30px; bottom: 80px; z-index: 214748364;">
-                <!--v-if--></div><!-- <keywordPage v-show="commonStore.showKeywordTool"/> -->
+                <!--v-if-->
+            </div><!-- <keywordPage v-show="commonStore.showKeywordTool"/> -->
         </div>
         <link rel="stylesheet" type="text/css"
             href="chrome-extension://hpmllfbpmmhjncbfofmkkgomjpfaocca/assets/css/content.css">
