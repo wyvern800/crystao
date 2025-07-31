@@ -33,6 +33,41 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Handle video playback with improved error handling
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('mainVideo');
+                if (video) {
+                    // Ensure video starts muted
+                    video.muted = true;
+                    
+                    // Play video once metadata is loaded
+                    video.addEventListener('loadedmetadata', function() {
+                        video.play().catch(function(error) {
+                            console.warn('Video autoplay was prevented:', error);
+                        });
+                    });
+
+                    // Enable sound on first click
+                    document.addEventListener('click', function unmute() {
+                        if (video.muted) {
+                            video.muted = false;
+                            video.play().catch(function(error) {
+                                console.warn('Video playback failed:', error);
+                                // Retry muted if unmuted playback fails
+                                video.muted = true;
+                                video.play();
+                            });
+                            document.removeEventListener('click', unmute);
+                        }
+                    }, { once: true });
+
+                    // Handle any errors during playback
+                    video.addEventListener('error', function(error) {
+                        console.error('Video error:', error);
+                    });
+                }
+            });
+            
             // FAQ accordion functionality
             const faqButtons = document.querySelectorAll('.overflow-hidden.border-b button');
             faqButtons.forEach(button => {
@@ -443,7 +478,7 @@
                                                 <path d="M20 6 9 17l-5-5"></path>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-800 text-base leading-relaxed"><b>32 livros para
+                                        <span class="text-gray-800 text-base leading-relaxed"><b>35 livros para
                                                 colorir</b> exclusivos</span>
                                     </li>
                                     <li class="flex items-start space-x-3">
