@@ -34,10 +34,75 @@
       background: #16a34a;
       box-shadow: 0px 8px 16px -4px rgba(34, 197, 94, 0.25);
     }
+
+    .toast-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            transform: translateY(-150%);
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid #e2e8f0;
+            max-width: 300px;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+        
+        .toast-notification.show {
+            transform: translateY(0);
+        }
+        
+        .toast-icon {
+            background: #4CAF50;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .toast-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .toast-title {
+            font-weight: 600;
+            color: #1a202c;
+            font-size: 0.95rem;
+        }
+        
+        .toast-message {
+            color: #4a5568;
+            font-size: 0.875rem;
+        }
   </style>
 </head>
 
 <body style="margin: 0; padding: 0; font-family: 'Poppins', sans-serif;">
+  <div id="toast" class="toast-notification">
+        <div class="toast-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"/>
+            </svg>
+        </div>
+        <div class="toast-content">
+            <div class="toast-title">Nova compra realizada!</div>
+            <div class="toast-message"></div>
+        </div>
+    </div>
+
   <div style="display: flex; justify-content: center; align-items: center;">
     <div data-layer="Background" class="Background" style="background: white; overflow: hidden; width: 100vw;">
       <div data-layer="Section" class="Section"
@@ -70,7 +135,7 @@
             <div data-layer="Background+Shadow" class="BackgroundShadow"
               style="width: 24px; height: 24px; left: 10px; top: 10px; background: #FACC42; box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10); overflow: hidden; border-radius: 9999px">
               <div data-layer="⭐"
-                style="width: 8.63px; height: 20px; left: 7.88px; top: 2px; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">
+                style="width: 24px; height: 20px; display: flex; justify-content: center; align-items: center; color: white; font-size: 14px; font-family: Poppins; font-weight: 400;">
                 ⭐</div>
             </div>
             <span data-layer="Células" class="CLulas"
@@ -82,7 +147,7 @@
             <div data-layer="Background+Shadow" class="BackgroundShadow"
               style="width: 24px; height: 24px; left: 10px; top: 10px; background: #FA8F42; box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10); overflow: hidden; border-radius: 9999px">
               <div data-layer="🏠"
-                style="width: 14.28px; height: 20px; left: 5.03px; top: 2px; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">
+                style="width: 24px; height: 20px; display: flex; justify-content: center; align-items: center; color: white; font-size: 14px; font-family: Poppins; font-weight: 400;">
                 🏠</div>
             </div>
             <span data-layer="Escola Dominical" class="EscolaDominical"
@@ -94,7 +159,7 @@
             <div data-layer="Background+Shadow" class="BackgroundShadow"
               style="width: 24px; height: 24px; left: 10px; top: 10px; background: #F18EAF; box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10); overflow: hidden; border-radius: 9999px">
               <div data-layer="❤️"
-                style="width: 13.10px; height: 20px; left: 5.63px; top: 2px; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">
+                style="width: 24px; height: 20px; display: flex; justify-content: center; align-items: center; color: white; font-size: 14px; font-family: Poppins; font-weight: 400;">
                 ❤️</div>
             </div>
             <span data-layer="Devocional Familiar" class="DevocionalFamiliar"
@@ -743,10 +808,10 @@
         <div data-layer="Overlay+Shadow+OverlayBlur" class="OverlayShadowOverlayblur"
           style="width: 384px; height: 152px; display: flex; justify-content: center; align-items: center; flex-direction: column; background: rgba(255, 255, 255, 0.20); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); border-radius: 12px; backdrop-filter: blur(2px)">
           <div data-layer="Heading 3 → 💬 Dúvidas? Fale conosco!" class="Heading3DVidasFaleConosco"
-            style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #020817; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 28px; word-wrap: break-word">
+            style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #fff; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 28px; word-wrap: break-word">
             💬 Dúvidas? Fale conosco!</div>
           <div data-layer="Nossa equipe está pronta para ajudar você" class="NossaEquipeEstProntaParaAjudarVoc"
-            style="opacity: 0.90; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #020817; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">
+            style="opacity: 0.90; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #fff; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">
             Nossa equipe está pronta para ajudar você</div>
           <div data-layer="Button" class="Button"
             style="display: flex; justify-content: center; margin-top: 16px; padding: 8px; width: fit-content; background: white; box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10); overflow: hidden; border-radius: 16px">
@@ -765,7 +830,7 @@
               style="width: 80px; height: 80px; border-radius: 99999999px;">
           </div>
           <div data-layer="Heading 4 → Luz e Cor Cristã" class="Heading4LuzDoCUKids"
-            style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #2563EB; font-size: 20px; font-family: Poppins; font-weight: 700; line-height: 28px; word-wrap: break-word">
+            style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #0b0b0b; font-size: 20px; font-family: Poppins; font-weight: 700; line-height: 28px; word-wrap: break-word">
             Luz e Cor Cristã</div>
           <div
             data-layer="Educação cristã com amor e diversão para suas crianças. Fortalecendo a fé através da arte e criatividade."
@@ -917,6 +982,62 @@
         }
       });
     });
+
+    function gerarNomeCompletoAleatorio() {
+                const nome = nomes[Math.floor(Math.random() * nomes.length)];
+                const sobrenome1 = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+                const sobrenome2 = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+                
+                return `${nome} ${sobrenome1} ${sobrenome2}`;
+            }
+
+            const nomes = [
+                    "Beatriz", "Henrique", "Camila", "Felipe", "Larissa", "Bruno", "Carolina", "Gustavo",
+                    "Letícia", "Leonardo", "Fernanda", "Daniel", "Amanda", "Marcelo", "Aline", "André",
+                    "Patrícia", "Rodrigo", "Natália", "Eduardo", "Vanessa", "Thiago", "Renata", "Vinícius",
+                    "Sabrina", "Lucas Henrique", "Thaís", "Diego", "Tatiane", "Rafael Augusto", "Priscila",
+                    "Murilo", "Érika", "Igor", "Simone", "Caio Vinícius", "Denise", "Wallace", "Elaine",
+                    "Fernando", "Mônica", "Gabriel", "Juliana Cristina", "Samuel", "Cristina", "Jorge Luiz",
+                    "Paula Regina", "Vitor Hugo", "Sandra Regina", "Alan"
+                ];
+
+                const sobrenomes = [
+                    "Silva", "Souza", "Oliveira", "Santos", "Lima", "Pereira", "Ferreira", "Alves", "Carvalho",
+                    "Rocha", "Martins", "Dias", "Barros", "Rezende", "Teixeira", "Monteiro", "Ribeiro", "Moreira",
+                    "Costa", "Cardoso", "Andrade", "Melo", "Pires", "Cunha", "Freitas", "Santana", "Lacerda",
+                    "Paiva", "Fernandes", "Tavares", "Antunes", "Soares", "Nascimento", "Moura", "Farias",
+                    "Castro", "Duarte", "Matos", "Figueira", "Lemos", "Rezende", "Azevedo", "Luz", "Braga",
+                    "Almeida", "Mourão", "Vilela", "Regis", "Camargo", "Neves"
+                ];
+    
+            function showToast(message) {
+                const toast = document.getElementById('toast');
+                const messageEl = toast.querySelector('.toast-message');                
+                const products = ['Pacote Completo', 'Pacote Básico', "Pacote Básico + Desafio Bíblico de 7 Dias", 'Pacote Completo + Cartões Bíblicos para Memorização', 'Plano Básico + Planner Devocional Infantil', "Plano Básico e outras duas ofertas limitadas", "Plano Completo + Livro de Atividades Cristãs Extras"];
+                
+                const randomName = gerarNomeCompletoAleatorio();
+                const randomProduct = products[Math.floor(Math.random() * products.length)];
+                
+                messageEl.textContent = `${randomName} acabou de comprar o ${randomProduct}!`;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 6000);
+            }
+
+            // Show toast every 30-60 seconds
+            function scheduleRandomToast() {
+                const delay = Math.random() * (1000 - 1000) + 30000; // Random delay between 30-60 seconds
+                
+                setTimeout(() => {
+                    showToast();
+                    scheduleRandomToast();
+                }, delay);
+            }
+
+            // Start showing toasts after a 10 second initial delay
+            setTimeout(scheduleRandomToast, 10000);
   </script>
 
 </body>
